@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuctionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6000/PlayerService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6000/PlayerService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6000/PlayerService?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:6000/PlayerService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PlayerService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuctionService_GetAuctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuctions" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_GetAuctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_AddAuction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAuction" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_AddAuction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAuctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_DeleteAuction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuction" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_DeleteAuction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_UpdateAuction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAuction" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_UpdateAuction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAuctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IAuctionService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuctionService">
+    <wsdl:operation name="GetAuctions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionService/GetAuctions" message="tns:IAuctionService_GetAuctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionService/GetAuctionsResponse" message="tns:IAuctionService_GetAuctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAuction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionService/AddAuction" message="tns:IAuctionService_AddAuction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionService/AddAuctionResponse" message="tns:IAuctionService_AddAuction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionService/DeleteAuction" message="tns:IAuctionService_DeleteAuction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionService/DeleteAuctionResponse" message="tns:IAuctionService_DeleteAuction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionService/UpdateAuction" message="tns:IAuctionService_UpdateAuction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionService/UpdateAuctionResponse" message="tns:IAuctionService_UpdateAuction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuctionService/GetDataUsingDataContract" message="tns:IAuctionService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuctionService/GetDataUsingDataContractResponse" message="tns:IAuctionService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuctionService" type="tns:IAuctionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuctions">
+      <soap:operation soapAction="http://tempuri.org/IAuctionService/GetAuctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuction">
+      <soap:operation soapAction="http://tempuri.org/IAuctionService/AddAuction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuction">
+      <soap:operation soapAction="http://tempuri.org/IAuctionService/DeleteAuction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuction">
+      <soap:operation soapAction="http://tempuri.org/IAuctionService/UpdateAuction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IAuctionService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuctionService">
+    <wsdl:port name="BasicHttpBinding_IAuctionService" binding="tns:BasicHttpBinding_IAuctionService">
+      <soap:address location="http://localhost:6000/PlayerService/AuctionService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

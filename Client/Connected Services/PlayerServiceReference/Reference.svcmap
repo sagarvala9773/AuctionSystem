@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b9d32bf9-4b32-4496-80e0-25f98a5b35a6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/PlayerService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PlayerService.xsd" MetadataType="Schema" ID="75b0cc20-002e-4ccb-b75f-b119f7589724" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?xsd=xsd0" />
+    <MetadataFile FileName="PlayerService1.xsd" MetadataType="Schema" ID="46645aa9-0c92-4949-8eac-020c46070986" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?xsd=xsd2" />
+    <MetadataFile FileName="PlayerService2.xsd" MetadataType="Schema" ID="ba52c3c8-7e20-470a-bfa3-55b6ce7793be" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?xsd=xsd1" />
+    <MetadataFile FileName="PlayerService.wsdl" MetadataType="Wsdl" ID="ccd17669-8445-47a2-ade5-10a1e271ecc8" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?wsdl" />
+    <MetadataFile FileName="PlayerService3.xsd" MetadataType="Schema" ID="5810228a-c973-48d8-afb0-2cdeb85019bb" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?xsd=xsd3" />
+    <MetadataFile FileName="PlayerService.disco" MetadataType="Disco" ID="aeb284ab-134a-400a-b380-a2d0274c7186" SourceId="1" SourceUrl="http://localhost:8000/PlayerService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
